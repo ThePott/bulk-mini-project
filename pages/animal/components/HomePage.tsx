@@ -1,7 +1,7 @@
-import { Box, TextField, Input } from '@mui/material'
+import { Box, TextField } from '@mui/material'
 import { getRegExp } from 'korean-regexp'
 import { useSearchParams } from 'react-router'
-import { data as dataArray } from "../assets/data/data"
+import { dataArray } from "../assets/data/data"
 import AnimalBox from "./AnimalBox"
 
 

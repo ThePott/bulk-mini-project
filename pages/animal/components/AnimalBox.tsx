@@ -1,12 +1,12 @@
 import { Button, Typography } from "@mui/material"
 import { useState } from "react"
 import { useNavigate } from "react-router"
+import type { Animal } from "../interfaces"
 
-
-const AnimalBox = ({ data }) => {
+const AnimalBox = ({ data }: { data: Animal }) => {
   const [doShowName, setDoShowName] = useState(false)
   const navigate = useNavigate()
-  console.log("---- image:", data.img)
+  console.log("---- image:", data.imgSrc)
   return (
     <Button
       sx={{
@@ -18,12 +18,11 @@ const AnimalBox = ({ data }) => {
       }}
       className="w-[200px] h-[200px] relative overflow-hidden"
       variant="contained"
-      color="neutral"
       onClick={() => navigate(`/detail/${data.id}`)}
       onMouseEnter={() => setDoShowName(true)}
-      onMouseLeave={() => setDoShowName(false)}
-    >
-      <img src={data.img} alt={data.name} className="h-full" />
+      onMouseLeave={() => setDoShowName(false)}>
+
+      <img src={data.imgSrc} alt={data.name} className="h-full" />
       {
         doShowName &&
         <Typography

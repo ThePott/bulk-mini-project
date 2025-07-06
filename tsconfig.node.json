@@ -25,7 +25,7 @@
     "noUncheckedSideEffectImports": true,
 
     /* Path mapping */
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
