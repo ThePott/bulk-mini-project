@@ -1,18 +1,47 @@
-import { Box } from '@mui/material'
+import { Box, Tab, Tabs } from '@mui/material'
+import { useState } from 'react'
 
-import { Link, Outlet } from 'react-router'
+import { Outlet, useNavigate } from 'react-router'
+
+class RouteInfo {
+  name: string
+  label: string
+  navigateTo: string
+  constructor(name: string, label: string, navigateTo: string) {
+    this.name = name
+    this.label = label
+    this.navigateTo = navigateTo
+  }
+}
+
+const routeInfoArray = [
+  new RouteInfo("home", "Home", "/"),
+  new RouteInfo("blank", "Blank", "/blank"),
+  new RouteInfo("animal", "Animal", "/animal"),
+  new RouteInfo("zustandStateRerender", "Zustand State Rerender", "/zustand-state-rerender"),
+] as const
 
 const Layout = () => {
+  const [navigateTo, setNavigateTo] = useState<string>("/")
+  const navigate = useNavigate()
+
+  const handleChange = (event: React.SyntheticEvent<Element, Event>, newValue: string) => {
+    setNavigateTo(newValue)
+    navigate(newValue)
+  }
+
   return (
-    <Box>
-      <Box component="header">
-        <Link to="/">Home</Link>
-        <Link to="/blank">Blank</Link>
-        <Link to="/animal">Animal</Link>
-        <Link to="/zustand-state-rerender">Zustand State Rerender</Link>
-      </Box>
+    <Box className="w-[100vw] h-[100vh] overflow-hidden">
+      <Tabs
+        component="header"
+        value={navigateTo}
+        onChange={(event, newValue) => handleChange(event, newValue)}
+        variant='fullWidth'>
+        {routeInfoArray.map((routeInfo) => <Tab value={routeInfo.navigateTo} label={routeInfo.label} />)}
+      </Tabs>
+
       <Outlet />
-    </Box>
+    </Box >
   )
 }
 

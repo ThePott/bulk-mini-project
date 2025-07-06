@@ -15,7 +15,7 @@ const ZustandStateRerenderPage = () => {
   )
   
   return (
-    <Box className='h-[100vh] w-[100vw] py-6 flex justify-center overflow-y-scroll flex-wrap gap-6'>
+    <Box sx={{scrollbarColor: "hsl(0 0 30) transparent"}} className='h-full py-6 flex justify-center overflow-y-scroll flex-wrap gap-6'>
       <Box className="flex flex-col gap-6 items-center">
 
         <Typography variant='h5' className='font-semibold'>Zustand Store State을 어떻게 할당할까</Typography>
