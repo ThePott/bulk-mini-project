@@ -1,8 +1,8 @@
 
-const ReadMeHomePage = () => {
+const ReadMeAnimalHomePage = () => {
   return (
-    <div>ReadMeHomePage</div>
+    <div>ReadMeAnimalHomePage</div>
   )
 }
 
-export default ReadMeHomePage
+export default ReadMeAnimalHomePage

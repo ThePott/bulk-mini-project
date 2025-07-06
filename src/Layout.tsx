@@ -7,8 +7,9 @@ const Layout = () => {
     <Box>
       <Box component="header">
         <Link to="/">Home</Link>
-        <Link to="/animal">Animal</Link>
         <Link to="/blank">Blank</Link>
+        <Link to="/animal">Animal</Link>
+        <Link to="/zustand-state-rerender">Zustand State Rerender</Link>
       </Box>
       <Outlet />
     </Box>

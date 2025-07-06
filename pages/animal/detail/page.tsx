@@ -3,7 +3,7 @@ import { Box, Button, Typography } from '@mui/material';
 import { useNavigate, useParams } from 'react-router';
 import { dataArray } from "../assets/data/data";
 
-const DetailPage = () => {
+const AnimalDetailPage = () => {
   const params = useParams()
   const animalIdInString = params.animalId
   const animalIdInNumber = Number(animalIdInString)
@@ -28,4 +28,4 @@ const DetailPage = () => {
   )
 }
 
-export default DetailPage
+export default AnimalDetailPage

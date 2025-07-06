@@ -6,7 +6,7 @@ import type { Animal } from "../interfaces"
 const AnimalBox = ({ data }: { data: Animal }) => {
   const [doShowName, setDoShowName] = useState(false)
   const navigate = useNavigate()
-  console.log("---- image:", data.imgSrc)
+  
   return (
     <Button
       sx={{
