@@ -25,7 +25,7 @@ const Layout = () => {
   const [navigateTo, setNavigateTo] = useState<string>("/")
   const navigate = useNavigate()
 
-  const handleChange = (event: React.SyntheticEvent<Element, Event>, newValue: string) => {
+  const handleChange = (_: React.SyntheticEvent<Element, Event>, newValue: string) => {
     setNavigateTo(newValue)
     navigate(newValue)
   }
