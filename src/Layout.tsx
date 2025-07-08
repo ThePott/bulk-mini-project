@@ -31,15 +31,16 @@ const Layout = () => {
   }
 
   return (
-    <Box className="w-[100vw] h-[100vh] overflow-hidden">
+    <Box className="w-[100vw] h-[100vh] overflow-hidden flex flex-col items-center">
       <Tabs
         component="header"
         value={navigateTo}
         onChange={(event, newValue) => handleChange(event, newValue)}
-        variant='fullWidth'>
-        {routeInfoArray.map((routeInfo) => <Tab value={routeInfo.navigateTo} label={routeInfo.label} />)}
+        variant='fullWidth'
+        className='w-full mb-6'>
+        {routeInfoArray.map((routeInfo, index) => <Tab key={index} value={routeInfo.navigateTo} label={routeInfo.label} />)}
       </Tabs>
-
+      
       <Outlet />
     </Box >
   )

@@ -14,14 +14,14 @@ const AnimalHomePage = () => {
 
 
   return (
-    <Box className="flex flex-col gap-6">
+    <Box className="max-w-5xl w-full flex flex-col gap-6">
       <TextField
         onChange={(event) => setSearchParams(`name=${event.target.value}`)}
         variant='outlined'
         label="검색"
       />
 
-      <Box className='flex flex-wrap gap-6'>
+      <Box className='grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6'>
         {filteredDataArray.map((data) => <AnimalBox key={data.id} data={data} />)}
       </Box>
     </Box>

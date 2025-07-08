@@ -10,15 +10,12 @@ const AnimalBox = ({ data }: { data: Animal }) => {
   return (
     <Button
       sx={{
-        color: "hsl(0 0 30%)",
-        borderColor: "hsl(0 0 30%)",
         borderRadius: "24px",
         padding: "12px",
-        "&:hover": { borderColor: "hsl(0 0 60%)" }
       }}
-      className="w-[200px] h-[200px] relative overflow-hidden"
+      className="h-[200px] relative overflow-hidden"
       variant="contained"
-      onClick={() => navigate(`/detail/${data.id}`)}
+      onClick={() => navigate(`/animal/${data.id}`)}
       onMouseEnter={() => setDoShowName(true)}
       onMouseLeave={() => setDoShowName(false)}>
 

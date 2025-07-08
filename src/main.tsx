@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import './index.css'
 import Layout from "./Layout.tsx"
 import theme from './theme.ts'
-import MainPage from "@/pages/MainPage.tsx"
+import MainPage from "@/pages/home/page.tsx"
 import BlankPage from "@/pages/blank/page.tsx"
 import ZustandStateRerenderPage from "@/pages/zustand-state-rerender/page.tsx"
 
@@ -26,12 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/animal",
         element: <AnimalHomePage />,
-        children: [
-          {
-            path: ":animalId",
-            element: <AnimalDetailPage />
-          },
-        ]
+      },
+      {
+        path: "/animal/:animalId",
+        element: <AnimalDetailPage />,
       },
       {
         path: "/zustand-state-rerender",
