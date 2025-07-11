@@ -9,7 +9,7 @@
 
 ## 할 것
 1. Study Member Box 만들기
-    compound pattern 쓰기
+    compound pattern 쓰기 <<< 하는 중>>>
 
 
 ## 배운 것
@@ -20,4 +20,10 @@
 https://github.com/ThePott/bulk-mini-project
 
 우혜림: https://todo-list-app-ecru-pi.vercel.app/
+https://github.com/rimi-w/TodoList-App
 
+에러 페이지 만들자 --- throw new Error 할 때 들어가지는 것 / not found page 2개
+
+1. 이 페이지에서는 무엇을 하려고 했는지를 설명
+2. 이 프로젝트의 깃헙 페이지를 링크
+-- 깃헙 페이지의 README를 보여주는 게 좋을까?

@@ -1,0 +1,10 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- White circular background -->
+<circle cx="512" cy="512" r="512" fill="white"/>
+<!-- Left eye -->
+<ellipse cx="190" cy="432" rx="62" ry="64" fill="black"/>
+<!-- Right eye -->
+<ellipse cx="832" cy="430" rx="64" ry="62" fill="black"/>
+<!-- Smile -->
+<path d="M329 552C329 552 329 691 512 691C695 691 695 552 695 552" stroke="black" stroke-width="50" stroke-linecap="round"/>
+</svg>
