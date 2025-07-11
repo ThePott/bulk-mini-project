@@ -2,6 +2,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import { Box, IconButton, Typography } from "@mui/material";
 import type { Site, StudyMember, UrlInfo } from '../interfaces';
+import type { ReactNode } from 'react';
 
 const SiteIcon = ({ site }: { site: Site }) => {
   switch (site) {
@@ -34,7 +35,7 @@ const StudyMemberIndivisual = ({ studyMember }: { studyMember: StudyMember }) =>
   )
 }
 
-const StudyMemberList = ({ children }) => {
+const StudyMemberList = ({ children }: {children: ReactNode}) => {
   return (
     <Box className="flex flex-col gap-3">
       <Typography variant='h6'>함께 한 스터디원</Typography>
