@@ -19,6 +19,7 @@ const routeInfoArray = [
   new RouteInfo("blank", "Blank", "/blank"),
   new RouteInfo("animal", "Animal", "/animal"),
   new RouteInfo("zustandStateRerender", "Zustand State Rerender", "/zustand-state-rerender"),
+  new RouteInfo("cafe", "Cafe", "/cafe"),
 ] as const
 
 const Layout = () => {
