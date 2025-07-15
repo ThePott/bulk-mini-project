@@ -31,7 +31,7 @@ const AnimalBox = ({ data, isVisible = true }: { data: Animal, isVisible: boolea
         <Typography
           variant='h6'
           color="hsl(0 0 30%)"
-          className="absolute bg-white w-full bottom-0 p-2" >{data.name}</Typography>
+          className="absolute bottom-0 left-0 bg-white w-full p-2" >{data.name}</Typography>
       }
 
     </Button >
