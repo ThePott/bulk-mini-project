@@ -38,6 +38,8 @@
 
   },
   "include": [
-    "src"
+    "src",
+    "pages",
+    // "vite-env.d.ts",
   ]
 }
