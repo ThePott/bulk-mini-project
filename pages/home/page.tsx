@@ -1,7 +1,9 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Box, IconButton, Paper, Typography } from "@mui/material";
+import { Box, Dialog, DialogTitle, IconButton, Paper, Typography } from "@mui/material";
 import { default as StudyMemberList, default as StudyMemeberList } from "./components/StudyMemberList";
 import type { StudyMember } from "./interfaces";
+import README from "@/README.md?raw"
+import ReactMarkdown from "react-markdown"
 
 const studyMemberArray: StudyMember[] = [
   {
@@ -22,7 +24,7 @@ const studyMemberArray: StudyMember[] = [
 
 const MainPage = () => {
   return (
-    <Paper sx={{borderRadius: "24px"}} className="mx-auto mt-12 p-12 flex flex-col gap-6">
+    <Paper sx={{ borderRadius: "24px" }} className="mx-auto mt-12 p-12 flex flex-col gap-6">
       <Box className="flex gap-6 items-center">
         <Typography variant="h4">리액트 과제 다듬기 스터디</Typography>
         <a href="https://github.com/ThePott/bulk-mini-project" target="_blank">
@@ -33,9 +35,16 @@ const MainPage = () => {
       </Box>
 
       <hr />
-
+      
+      <Dialog onClose={() => console.log("---- dialog closed")} open={false}>
+        <DialogTitle>Set backup account</DialogTitle>
+        <ReactMarkdown>
+          {README}
+        </ReactMarkdown>
+      </Dialog>
       <StudyMemberList>
-        {studyMemberArray.map((studyMember) => <StudyMemeberList.Indivisual studyMember={studyMember} />)}
+
+        {studyMemberArray.map((studyMember, index) => <StudyMemeberList.Indivisual key={index} studyMember={studyMember} />)}
       </StudyMemberList>
     </Paper>
   )

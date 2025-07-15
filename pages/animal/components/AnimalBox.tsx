@@ -3,23 +3,29 @@ import { useState } from "react"
 import { useNavigate } from "react-router"
 import type { Animal } from "../interfaces"
 
-const AnimalBox = ({ data }: { data: Animal }) => {
+const AnimalBox = ({ data, isVisible = true }: { data: Animal, isVisible: boolean }) => {
   const [doShowName, setDoShowName] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false)
   const navigate = useNavigate()
-  
+
   return (
     <Button
       sx={{
         borderRadius: "24px",
         padding: "12px",
+        display: isVisible ? "block" : "none",
       }}
-      className="h-[200px] relative overflow-hidden"
+      className={`h-[200px] relative overflow-hidden`}
       variant="contained"
       onClick={() => navigate(`/animal/${data.id}`)}
       onMouseEnter={() => setDoShowName(true)}
       onMouseLeave={() => setDoShowName(false)}>
 
-      <img src={data.imgSrc} alt={data.name} className="h-full" />
+      <img
+        src={data.imgSrc} alt={data.name} onLoad={() => setIsLoaded(true)}
+        className={`transition-opacity ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      />
+
       {
         doShowName &&
         <Typography
@@ -27,6 +33,7 @@ const AnimalBox = ({ data }: { data: Animal }) => {
           color="hsl(0 0 30%)"
           className="absolute bg-white w-full bottom-0 p-2" >{data.name}</Typography>
       }
+
     </Button >
   )
 }
