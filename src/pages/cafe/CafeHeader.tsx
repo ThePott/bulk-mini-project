@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <Box className="flex gap-3 py-6 px-3 items-center">
 
-      <Link to="/" className="flex gap-3 items-center">
+      <Link to="/cafe" className="flex gap-3 items-center">
         <LocalCafeRoundedIcon fontSize='large' />
         <Typography variant="h4">여우원숭이 카페</Typography>
       </Link>

@@ -39,7 +39,7 @@
   },
   "include": [
     "src",
-    "pages",
+    "src/pages",
     // "vite-env.d.ts",
   ]
 }

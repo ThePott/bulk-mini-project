@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 import { Provider } from "react-redux"
 import { Outlet } from "react-router"
-import Header from "./Header"
+import Header from "./CafeHeader"
 import store from "./store"
 
 const CafeLayout = () => {

@@ -1,7 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Box, Dialog, DialogTitle, IconButton, Paper, Typography } from "@mui/material";
 import { default as StudyMemberList, default as StudyMemeberList } from "./components/StudyMemberList";
-import type { StudyMember } from "./interfaces";
+import type { StudyMember } from "./homeInterfaces";
 import README from "@/README.md?raw"
 import ReactMarkdown from "react-markdown"
 
@@ -23,6 +23,7 @@ const studyMemberArray: StudyMember[] = [
 ]
 
 const MainPage = () => {
+  
   return (
     <Paper sx={{ borderRadius: "24px" }} className="mx-auto mt-12 p-12 flex flex-col gap-6">
       <Box className="flex gap-6 items-center">

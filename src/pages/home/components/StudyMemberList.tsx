@@ -1,7 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import { Box, IconButton, Typography } from "@mui/material";
-import type { Site, StudyMember, UrlInfo } from '../interfaces';
+import type { Site, StudyMember, UrlInfo } from '../homeInterfaces';
 import type { ReactNode } from 'react';
 
 const SiteIcon = ({ site }: { site: Site }) => {

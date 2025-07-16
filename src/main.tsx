@@ -1,17 +1,17 @@
-import AnimalDetailPage from '@/pages/animal/detail/page.tsx'
-import AnimalHomePage from '@/pages/animal/page.tsx'
-import BlankPage from '@/pages/blank/page.tsx'
-import CafeMainPage from '@/pages/cafe/cafe-home/CafeMainPage.tsx'
-import MainPage from '@/pages/home/page.tsx'
-import ZustandStateRerenderPage from '@/pages/zustand-state-rerender/page.tsx'
+import AnimalDetailPage from '@/src/pages/animal/detail/page.tsx'
+import AnimalHomePage from '@/src/pages/animal/page.tsx'
+import BlankPage from '@/src/pages/blank/page.tsx'
+import CafeMainPage from '@/src/pages/cafe/cafe-home/CafeMainPage.tsx'
+import MainPage from '@/src/pages/home/HomePage.tsx'
+import ZustandStateRerenderPage from '@/src/pages/zustand-state-rerender/page.tsx'
 import { ThemeProvider } from '@mui/material'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import './index.css'
 import Layout from "./Layout.tsx"
 import theme from './theme.ts'
-import CafeLayout from '@/pages/cafe/CafeLayout.tsx'
-import CafeCartPage from '@/pages/cafe/cafe-cart/CartPage.tsx'
+import CafeLayout from '@/src/pages/cafe/CafeLayout.tsx'
+import CafeCartPage from '@/src/pages/cafe/cafe-cart/CartPage.tsx'
 
 // Fold Level 4 ~ 5
 const router = createBrowserRouter([
