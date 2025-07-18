@@ -22,9 +22,17 @@ const routeInfoArray = [
   new RouteInfo("cafe", "Cafe", "/cafe"),
 ] as const
 
+
+
+// Fold Level 2
 const Layout = () => {
+
   const [navigateTo, setNavigateTo] = useState<string>("/")
   const navigate = useNavigate()
+
+  
+
+
 
   const handleChange = (_: React.SyntheticEvent<Element, Event>, newValue: string) => {
     setNavigateTo(newValue)
@@ -41,7 +49,7 @@ const Layout = () => {
         className='w-full shrink-0'>
         {routeInfoArray.map((routeInfo, index) => <Tab key={index} value={routeInfo.navigateTo} label={routeInfo.label} />)}
       </Tabs>
-      
+
       <Outlet />
     </Box >
   )

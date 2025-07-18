@@ -1,14 +1,9 @@
-import dummyDataArray from "../cafe-assets/dummyData"
 import { Box } from "@mui/material"
+import dummyDataArray from "../cafe-assets/dummyData"
 import MenuBox from "./_components/MenuBox"
 import OrderModal from "./_components/OptionModal"
-import { useSelector } from "react-redux"
-import type { RootState } from "../interfaces"
 
 const CafeMainPage = () => {
-  const cart = useSelector((state: RootState) => state.cart)
-  console.log("---- dummy:", dummyDataArray)
-  
   return (
     <>
       <OrderModal />
