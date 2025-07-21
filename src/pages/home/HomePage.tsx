@@ -74,7 +74,7 @@ const MainPage = () => {
       <Dialog onClose={handleClose} open={doShowModalDict[page]}>
 
         <Box className="p-3">
-          <Typography variant='h1' sx={{ fontWeight: 900 }} >README</Typography>
+          {/* <Typography variant='h1' sx={{ fontWeight: 900 }} >README</Typography> */}
           <ReactMarkdown components={MarkdownComponents}>
             {README}
           </ReactMarkdown>
