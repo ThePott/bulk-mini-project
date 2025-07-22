@@ -26,23 +26,22 @@ const MarkdownComponents: Components = {
     <Typography>{children}</Typography>
   ),
 
-  // List components
   ul: ({ children }) => (
-    <List sx={{ paddingLeft: 2 }}>
+    <ul className="list-disc list-inside ml-4 space-y-1">
       {children}
-    </List>
+    </ul>
   ),
-  
+
   ol: ({ children }) => (
-    <List component="ol" sx={{ paddingLeft: 2 }}>
+    <ol className="list-decimal list-inside ml-4 space-y-1">
       {children}
-    </List>
+    </ol>
   ),
-  
+
   li: ({ children }) => (
-    <ListItem sx={{ display: 'list-item', paddingY: 0.5, paddingX: 0 }}>
-      <Typography component="span">{children}</Typography>
-    </ListItem>
+    <li className="text-inherit">
+      {children}
+    </li>
   ),
 
   code: ({ children, className }) => {

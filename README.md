@@ -1,6 +1,6 @@
 # 🚀 Look at Mini React Projects at a Glance!
 
-## 📖 Introduction
+##  Introduction
 This is an app that combines many mini react projects with descriptions
 
 ## ✨ Main Feature

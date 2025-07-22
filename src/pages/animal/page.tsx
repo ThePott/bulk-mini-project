@@ -4,7 +4,8 @@ import React from 'react'
 import { useSearchParams } from 'react-router'
 import { dataArray } from "./assets/data/data"
 import AnimalBox from './components/AnimalBox'
-
+import ReadmeDialog from '@/src/components/ReadmeDialog'
+import README from "./AnimalReadme.md?raw"
 
 const AnimalHomePage = React.memo(() => {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -16,6 +17,7 @@ const AnimalHomePage = React.memo(() => {
 
   return (
     <Box className="max-w-5xl w-full flex flex-col overflow-hidden">
+      <ReadmeDialog readme={README} />
 
       <TextField
       sx={{marginTop: "12px"}}

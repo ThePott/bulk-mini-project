@@ -1,14 +1,9 @@
+import README from "@/README.md?raw";
+import ReadmeDialog from '@/src/components/ReadmeDialog';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Box, Dialog, DialogTitle, IconButton, Paper, Typography } from "@mui/material";
+import { Box, IconButton, Paper, Typography } from "@mui/material";
 import { default as StudyMemberList, default as StudyMemeberList } from "./components/StudyMemberList";
 import type { StudyMember } from "./homeInterfaces";
-import README from "@/README.md?raw"
-import ReactMarkdown from "react-markdown"
-import type { Page } from '@/src/_interfaces/commonInterfaces';
-import useCommonStore from '@/src/_store/commmonStore';
-import { useMemo } from 'react';
-import { useLocation } from 'react-router';
-import MarkdownComponents from '@/src/components/markdownComponents';
 
 const studyMemberArray: StudyMember[] = [
   {
@@ -27,37 +22,8 @@ const studyMemberArray: StudyMember[] = [
   },
 ]
 
-/** ----------- fallback 로직 없음
- * 
- * 현재 떠오르는 것 doShowModalDict에서 불러와서 있으면 되고 없으면 안 된다는 식으로
- */
-const convertPathToPage = (pathname: string): Page => {
-  const splitedPathnameArray = pathname.split("/")
-  const tempPageName = splitedPathnameArray[1]
-  const upperCasedName = tempPageName.toUpperCase()
-  const page: Page = upperCasedName ? upperCasedName.replace(/-/g, "_") as Page : "HOME"
-
-  return page
-}
 
 const MainPage = () => {
-  const doShowModalDict = useCommonStore((state) => state.doShowModalDict)
-  const updateDict = useCommonStore((state) => state.updateDict)
-  // const 
-  const location = useLocation()
-  const pathname = location.pathname
-
-  const page = useMemo(
-    () => { return convertPathToPage(pathname) },
-    [pathname]
-  )
-
-  const handleClose = () => {
-    // doShowModalDict[page] = false
-    updateDict(page, false)
-
-  }
-
   return (
     <Paper sx={{ borderRadius: "24px" }} className="mx-auto mt-12 p-12 flex flex-col gap-6">
       <Box className="flex gap-6 items-center">
@@ -71,16 +37,7 @@ const MainPage = () => {
 
       <hr />
 
-      <Dialog onClose={handleClose} open={doShowModalDict[page]}>
-
-        <Box className="p-3">
-          {/* <Typography variant='h1' sx={{ fontWeight: 900 }} >README</Typography> */}
-          <ReactMarkdown components={MarkdownComponents}>
-            {README}
-          </ReactMarkdown>
-        </Box>
-
-      </Dialog>
+      <ReadmeDialog readme={README} />
 
       <StudyMemberList>
 
