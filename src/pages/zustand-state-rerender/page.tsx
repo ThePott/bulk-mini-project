@@ -2,6 +2,8 @@ import { Box, Typography } from '@mui/material'
 import FruitBox from './components/FruitBox'
 import { logAtStart } from './assets/asciiArt'
 import { useEffect } from 'react'
+import README from "./zustandReadme.md?raw"
+import ReadmeDialog from '@/src/components/ReadmeDialog'
 
 const ZustandStateRerenderPage = () => {
   setTimeout(
@@ -16,6 +18,8 @@ const ZustandStateRerenderPage = () => {
   
   return (
     <Box sx={{scrollbarColor: "hsl(0 0 30) transparent"}} className='h-full py-6 flex justify-center overflow-y-scroll flex-wrap gap-6'>
+      <ReadmeDialog readme={README} />
+      
       <Box className="flex flex-col gap-6 items-center">
 
         <Typography variant='h5' className='font-semibold'>Zustand Store State을 어떻게 할당할까</Typography>

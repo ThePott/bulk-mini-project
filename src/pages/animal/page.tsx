@@ -5,7 +5,7 @@ import { useSearchParams } from 'react-router'
 import { dataArray } from "./assets/data/data"
 import AnimalBox from './components/AnimalBox'
 import ReadmeDialog from '@/src/components/ReadmeDialog'
-import README from "./AnimalReadme.md?raw"
+import README from "./animalReadme.md?raw"
 
 const AnimalHomePage = React.memo(() => {
   const [searchParams, setSearchParams] = useSearchParams()
